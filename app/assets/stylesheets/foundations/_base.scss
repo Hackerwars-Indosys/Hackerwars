@@ -1,0 +1,16 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+
+#content {
+  @extend .content--center;
+  @include sp {
+  }
+}
+
+%h3 {
+  @include sp {
+    font-size: $sp_huge;
+  }
+}

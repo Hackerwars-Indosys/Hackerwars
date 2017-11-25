@@ -1,72 +1,60 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Provider:</strong>
-  <%= @user.provider %>
-</p>
+<div class="user">
+  <ul class="user-header-container">
+    <li class="user-header-box">
+      <div class="user-icon-wrapper">
+        <img src=http://format.fideli.com/format/capture/1/4/10001.jpg class="user-icon" >
+      </div>
+    </li>
+    <li class="user-header-box">
+      <div class="user-header-detail">
+        <%= @user.name %>
+      </div>
+      <div class="user-header-detail">
+        <p>年齢:
+        <%= @user.old %>
+        </p>
+      </div>
+    </li>
+  </ul>
 
-<p>
-  <strong>Uid:</strong>
-  <%= @user.uid %>
-</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @user.image_url %>
-</p>
+  <div class="user-content-wrapper">
+    <div class="user-content-title">
+      <p>現在の仕事</p>
+    </div>
+    <div class="user-content-detail">
+      <%= @user.job1 %>
+    </div>
+  </div>
 
-<p>
-  <strong>Old:</strong>
-  <%= @user.old %>
-</p>
+  <div class="user-content-wrapper">
+    <div class="user-content-title">
+      <p>職歴</p>
+    </div>
+    <div class="user-content-detail">
+      <%= @user.job1 %>
+    </div>
+    <div class="user-content-detail">
+      <%= @user.job2 %>
+    </div>
+    <div class="user-content-detail">
+      <%= @user.job2 %>
+    </div>
+  </div>
+  <div class="user-content-wrapper">
+    <div class="user-content-title">
+      <strong>学歴</strong>
+    </div>
+    <div class="user-content-detail">
+      <%= @user.university %>
+    </div>
+  </div>
 
-<p>
-  <strong>University:</strong>
-  <%= @user.university %>
-</p>
-
-<p>
-  <strong>Job1:</strong>
-  <%= @user.job1 %>
-</p>
-
-<p>
-  <strong>Job2:</strong>
-  <%= @user.job2 %>
-</p>
-
-<p>
-  <strong>Job3:</strong>
-  <%= @user.job3 %>
-</p>
-
-<p>
-  <strong>Q1:</strong>
-  <%= @user.question1%>
-</p>
-
-<p>
-  <strong>Q2:</strong>
-  <%= @user.question2%>
-</p>
-<p>
-  <strong>Q3:</strong>
-  <%= @user.question3%>
-</p>
-<p>
-  <strong>Q4:</strong>
-  <%= @user.question4%>
-</p>
-<p>
-  <strong>Q5:</strong>
-  <%= @user.question5%>
-</p>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Question', question_user_path(@user) %> |
-<%= link_to 'Result', result_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Question', question_user_path(@user) %> |
+  <%= link_to 'Result', result_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>

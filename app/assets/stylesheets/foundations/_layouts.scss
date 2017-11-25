@@ -1,0 +1,41 @@
+/* mixins */
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
+  
+@mixin flat-button($button-color: $green){
+  background: $white;
+  padding: 0.3em 0.2em;
+  text-decoration: none;
+  color: $button-color;
+  border: solid 2px $button-color;
+  border-radius: 3px;
+  transition: .4s;
+}
+  
+
+@mixin pc($width: $break_width_sp) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin sp($width: $break_width_sp) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+/* classes */
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}

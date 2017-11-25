@@ -1,0 +1,29 @@
+/* classes */
+
+.background--shadow {
+  background: $transparent_black;
+}
+
+/* border */
+.border--inside--grey {
+  border: 1px solid $dull_grey;
+  box-sizing: border-box;
+}
+
+.border__bottom--shadow {
+  border-bottom: 1px solid $dull_grey;
+}
+
+.box-shadow__bottom {
+  box-shadow: 0px 5px 5px $shadow_black;
+}
+
+/* position */
+.content--center{
+  margin: 0 auto;
+}
+
+/* font */
+.font-color--white {
+  color: $dull_white;
+}
