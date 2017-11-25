@@ -84,6 +84,7 @@ class UsersController < ApplicationController
         end
         jobs[data[0]] = sum
       end
+      return jobs.sort_by{|k,v| v}
       for job in jobs.sort_by {|k, v| v} 
         response.append(job[0])
       end
