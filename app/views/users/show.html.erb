@@ -46,9 +46,26 @@
 </p>
 
 <p>
-  <strong>Result:</strong>
-  <%= @user.result_id %>
+  <strong>Q1:</strong>
+  <%= @user.question1%>
 </p>
 
+<p>
+  <strong>Q2:</strong>
+  <%= @user.question2%>
+</p>
+<p>
+  <strong>Q3:</strong>
+  <%= @user.question3%>
+</p>
+<p>
+  <strong>Q4:</strong>
+  <%= @user.question4%>
+</p>
+<p>
+  <strong>Q5:</strong>
+  <%= @user.question5%>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Question', question_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
