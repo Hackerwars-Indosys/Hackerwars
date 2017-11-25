@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @user.provider %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @user.uid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @user.image_url %>
+</p>
+
+<p>
+  <strong>Old:</strong>
+  <%= @user.old %>
+</p>
+
+<p>
+  <strong>University:</strong>
+  <%= @user.university %>
+</p>
+
+<p>
+  <strong>Job1:</strong>
+  <%= @user.job1 %>
+</p>
+
+<p>
+  <strong>Job2:</strong>
+  <%= @user.job2 %>
+</p>
+
+<p>
+  <strong>Job3:</strong>
+  <%= @user.job3 %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @user.result_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
