@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171125081109) do
 
-  create_table "questions", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "content"
-    t.string "image_path"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "provider"
     t.string "uid"

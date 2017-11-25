@@ -16,19 +16,21 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.old %></td>
-        <td><%= user.university %></td>
-        <td><%= user.job1 %></td>
-        <td><%= user.job2 %></td>
-        <td><%= user.job3 %></td>
-        <td><%= user.question1%></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% if @users.present? %>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.old %></td>
+          <td><%= user.university %></td>
+          <td><%= user.job1 %></td>
+          <td><%= user.job2 %></td>
+          <td><%= user.job3 %></td>
+          <td><%= user.question1%></td>
+          <td><%= link_to 'Show', user %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
