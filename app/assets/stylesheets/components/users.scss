@@ -8,6 +8,7 @@
 }
 
 .user-header-container{
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -29,6 +30,34 @@
 
 .user-header-detail{
   font-size: $sp_large;
+}
+
+.user-edit-link-wrapper{
+  text-align: right;
+}
+
+.user-edit-link{
+  color: grey; 
+  font-size: 8px;
+  border: 1px solid gray;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px; 
+  border-radius:3px;
+}
+.user-links{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @at-root {
+    #{&}__question{
+      @include flat-button($green);
+      margin-right: 10px;
+    }
+    #{&}__result{
+      @include flat-button(grey);
+      margin-left: 10px;
+    }
+  }
 }
 
 .user-content-wrapper{
