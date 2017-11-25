@@ -1,5 +1,6 @@
+require 'csv'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :question]
+  before_action :set_user, only: [:result, :show, :edit, :update, :destroy, :question]
 
   # GET /users
   # GET /users.json
@@ -17,6 +18,10 @@ class UsersController < ApplicationController
   end
 
   def question
+  end
+
+  def result
+    @recommend_jobs = calculate_distance(@user)
   end
 
   # POST /users
@@ -63,6 +68,26 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def calculate_distance(user)
+      csv_data = CSV.read('app/assets/data/jobs.csv', headers:false)
+      jobs = {}
+      response = []
+      for data in csv_data do
+        sum = 0
+        if data[0] == "job_name" then
+          next
+        end
+        for number in 1..5 do
+          sum += (user["question" + number.to_s ].to_i - data[number].to_i) ** 2
+        end
+        jobs[data[0]] = sum
+      end
+      for job in jobs.sort_by {|k, v| v} 
+        response.append(job[0])
+      end
+      return response
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
