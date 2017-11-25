@@ -54,6 +54,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_question
+    @user = User.find_by(uid: params[:uid])
+    @user.attributes = { params[:qid] => params[:ans] }
+    @user.save()
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy

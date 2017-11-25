@@ -12,3 +12,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( jTinder/jquery.min.js )
+Rails.application.config.assets.precompile += %w( jTinder/jquery.transform2d.js )
+Rails.application.config.assets.precompile += %w( jTinder/jquery.jTinder.js )
+Rails.application.config.assets.precompile += %w( jTinder/main.js )

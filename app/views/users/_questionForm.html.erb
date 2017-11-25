@@ -11,33 +11,98 @@
     </div>
   <% end %>
 
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/jTinder.css">
+    <%= hidden_field :user, :uid %>
+  </head>
   
-  <div class="field">
-    <%= form.label :question1 %>
-    <%= form.number_field :question1, id: :user_question1 %>
-  </div>
+  <body>
+      <!-- start padding container -->
+      <div class="wrap">
+          <!-- start jtinder container -->
+          <div id="tinderslide">
+              <ul>
+                  <li class="pane1">
+                      <div class="img"></div>
+                      <div>Miami Beach</div>
+                      <div class="like"></div>
+                      <div class="dislike"></div>
+                  </li>
+                  <li class="pane2">
+                      <div class="img"></div>
+                      <div>San Francisco</div>
+                      <div class="like"></div>
+                      <div class="dislike"></div>
+                  </li>
+                  <li class="pane3">
+                      <div class="img"></div>
+                      <div>Chicago</div>
+                      <div class="like"></div>
+                      <div class="dislike"></div>
+                  </li>
+                  <li class="pane4">
+                      <div class="img"></div>
+                      <div>New York</div>
+                      <div class="like"></div>
+                      <div class="dislike"></div>
+                  </li>
+                  <li class="pane5">
+                      <div class="img"></div>
+                      <div>Beach</div>
+                      <div class="like"></div>
+                      <div class="dislike"></div>
+                  </li>
+              </ul>
+          </div>
+          <!-- end jtinder container -->
+      </div>
+      <!-- end padding container -->
+  
+      <!-- jTinder trigger by buttons  -->
+      <div class="actions">
+          <a href="#" class="dislike"><i></i></a>
+          <a href="#" class="like"><i></i></a>
+      </div>
+  
+      <!-- jTinder status text  -->
+      <div id="status"></div>
+  
+      <!-- jQuery lib -->
+      <%= javascript_include_tag "jTinder/jquery.min.js" %>
+      <!-- transform2d lib -->
+      <%= javascript_include_tag "jTinder/jquery.transform2d.js" %>
+      <!-- jTinder lib -->
+      <%= javascript_include_tag "jTinder/jquery.jTinder.js" %>
+      <!-- jTinder initialization script -->
+      <%= javascript_include_tag "jTinder/main.js" %>
+  </body>
 
-  <div class="field">
-    <%= form.label :question2 %>
-    <%= form.number_field :question2, id: :user_question2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :question3 %>
-    <%= form.number_field :question3, id: :user_question3 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :question4 %>
-    <%= form.number_field :question4, id: :user_question4 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :question5 %>
-    <%= form.number_field :question5, id: :user_question5 %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <!-- <div class="field"> -->
+  <!--   <%= form.label :question1 %> -->
+  <!--   <%= form.number_field :question1, id: :user_question1 %> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="field"> -->
+  <!--   <%= form.label :question2 %> -->
+  <!--   <%= form.number_field :question2, id: :user_question2 %> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="field"> -->
+  <!--   <%= form.label :question3 %> -->
+  <!--   <%= form.number_field :question3, id: :user_question3 %> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="field"> -->
+  <!--   <%= form.label :question4 %> -->
+  <!--   <%= form.number_field :question4, id: :user_question4 %> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="field"> -->
+  <!--   <%= form.label :question5 %> -->
+  <!--   <%= form.number_field :question5, id: :user_question5 %> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="actions"> -->
+  <!--   <%= form.submit %> -->
+  <!-- </div> -->
 <% end %>
