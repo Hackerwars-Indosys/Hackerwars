@@ -21,12 +21,32 @@
 .user-header-container{
   margin-top: 40px;
   text-align: center;
+  @at-root{
+    #{&}__title{
+      font-size: $sp-large;
+    }
+  }
 }
 
 .user-header-box{
   display: inline-block;
   vertical-align: middle;
   width:40%;
+}
+
+
+.user-edit{
+  text-align: center;
+  font-size: $sp-medium;
+  @at-root{
+    #{&}__field{
+      margin-top: 20px;
+      @at-root{
+        #{&}__label{
+        }
+      }
+    }
+  }
 }
 
 .user-icon-wrapper{
