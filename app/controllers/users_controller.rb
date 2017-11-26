@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   end
 
   def update_question
-    @user = User.find_by(uid: params[:uid])
+    @user = User.find_by(id: params[:uid])
     @user.attributes = { params[:qid] => params[:ans] }
     @user.save()
   end
