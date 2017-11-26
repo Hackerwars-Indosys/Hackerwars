@@ -10,13 +10,13 @@
 
   <body>
     <header class="header">
-      <img class="header__top-icon-image" src="/assets/logo.png">
-      <div class="header__link-to-top">
-        Virtual Menter
-      </div>
-      <div class="header__link-to-login">
-        ログアウト
-      </div>
+      <img class="header__top-icon-image" src="/assets/logo_mini.png">
+      <% if @user.present? then %>
+        <%= link_to 'Virtual Menter', user_path(@user), class:"header__link-to-top" %>
+      <% else %>
+        <p class="header__link-to-top">Virtual Menter</p>
+      <% end %>
+      <%= link_to 'ログアウト', login_users_url(@user), class:"header__link-to-login" %>
     </header>
   
     <div class="container">
