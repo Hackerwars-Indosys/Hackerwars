@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'users#login'
   resources :users do
     member do
       get 'question'
