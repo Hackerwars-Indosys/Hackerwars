@@ -11,9 +11,7 @@
   <body>
     <header class="header">
       <img class="header__top-icon-image" src="/assets/logo.png">
-      <div class="header__link-to-top">
-        Virtual Menter
-      </div>
+      <%= link_to 'Virtual Menter', user_path(@user), class:"header__link-to-top" %>
       <div class="header__link-to-login">
         ログアウト
       </div>
