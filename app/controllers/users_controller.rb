@@ -1,6 +1,8 @@
 require 'csv'
 class UsersController < ApplicationController
   before_action :set_user, only: [:result, :show, :edit, :update, :destroy, :question]
+  before_action :user_logged_in?, except: [:show, :login]
+  before_action :check_user, only: [:result, :edit, :update, :destroy, :question]
 
   # GET /users
   # GET /users.json
@@ -20,11 +22,12 @@ class UsersController < ApplicationController
   def question
   end
 
-  def result
-    @recommend_jobs = calculate_distance(@user)
+  def login
+    $session["uid"] = 0;
   end
 
-  def login
+  def result
+    @recommend_jobs = calculate_distance(@user)
   end
 
   # POST /users
@@ -75,6 +78,17 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def check_user
+      if $session.present?
+        if @user.uid == $session.uid
+        else
+          redirect_to user_path($session)
+        end
+      else
+        redirect_to login_user_path
+      end
+    end
+      
     def set_user
       @user = User.find(params[:id])
     end
