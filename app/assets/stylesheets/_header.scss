@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+  background-color: $dark-green;
+  margin-bottom: 20px;
+  padding: 5px;
+  color: $white;
+  @extend .flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend .box-shadow__bottom;
+  z-index: 20;
+
+  @at-root {
+    #{&}__link-to-top {
+      color: $white;
+      font-size: $sp_large;
+      @extend .flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #{&}__top-icon-image {
+      @include circle(40px);
+    }
+
+    #{&}__link-caption {
+      color: $white;
+      font-style: none;
+      padding-left: 5px;
+    }
+
+    #{&}__link-to-login {
+      color: $white;
+      font-size: $sp_medium;
+      padding-right: 5px;
+    }
+  }
+}
