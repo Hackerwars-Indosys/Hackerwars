@@ -7,6 +7,17 @@
   margin: auto;
 }
 
+.user-login{
+  margin-top: 200px;
+  text-align: center;
+  @at-root{
+    #{&}__image{
+      width: 60%;
+    }
+  }
+
+}
+
 .user-header-container{
   margin-top: 40px;
   text-align: center;
