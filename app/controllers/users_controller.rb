@@ -24,6 +24,9 @@ class UsersController < ApplicationController
     @recommend_jobs = calculate_distance(@user)
   end
 
+  def login
+  end
+
   # POST /users
   # POST /users.json
   def create
