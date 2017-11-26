@@ -11,12 +11,22 @@
   <body>
     <header class="header">
       <img class="header__top-icon-image" src="/assets/logo_mini.png">
-      <% if @user.present? then %>
-        <%= link_to 'Virtual Menter', user_path(@user), class:"header__link-to-top" %>
+      <% if $session.present? then %>
+        <% if $session.uid != "0" then %>
+          <%= link_to 'Virtual Menter', user_path($session), class:"header__link-to-top" %>
+        <% else %>
+          <p class="header__link-to-top">Virtual Menter</p>
+        <% end %>
       <% else %>
         <p class="header__link-to-top">Virtual Menter</p>
       <% end %>
-      <%= link_to 'ログアウト', login_users_url(@user), class:"header__link-to-login" %>
+      <% if $session.present? then %>
+        <% if $session.uid != "0" then %>
+          <%= link_to 'ログアウト', login_users_url(@user), class:"header__link-to-login" %>
+        <% else %>
+          <p class="header__link-to-login"></p>
+        <% end %>
+      <% end %>
     </header>
   
     <div class="container">
