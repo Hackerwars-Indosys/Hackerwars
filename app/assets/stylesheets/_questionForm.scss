@@ -11,7 +11,7 @@ body {
 
 /* Wrapper with padding */
 .wrap  {
-    height: 300px;
+    height: 500px;
     padding: 5%;
 }
 
@@ -89,7 +89,7 @@ body {
 /* Like & dislike badge images */
 #tinderslide .like,
 #tinderslide .dislike {
-    background: url("../img/liked.png") no-repeat scroll 0 0;
+    background: url("/assets/liked.png") no-repeat scroll 0 0;
     opacity: 0;
     height: 80px;
     position: absolute;
@@ -110,7 +110,7 @@ body {
 #tinderslide .dislike {
     right: 45px;
     left: auto;
-    background: url("../img/nope.png") no-repeat scroll 0 0;
+    background: url("/assets/nope.png") no-repeat scroll 0 0;
 }
 
 /* Image container */
@@ -152,11 +152,11 @@ body {
 }
 
 .actions a.dislike i {
-    background: url("../img/dislike_button.png") no-repeat scroll center center;
+    background: url("/assets/dislike_button.png") no-repeat scroll center center;
 }
 
 .actions a.like i {
-    background: url("../img/like_button.png") no-repeat scroll center center;
+    background: url("/assets/like_button.png") no-repeat scroll center center;
 }
 
 .actions a {
@@ -188,23 +188,23 @@ body {
 
 /* jTinder images */
 #tinderslide .pane5 .img {
-    background: url("../img/pane/pane5.jpg") no-repeat scroll center center;
+    background: url("/assets/Q5.png") no-repeat scroll center center;
     background-size: cover;
 }
 #tinderslide .pane4 .img {
-    background: url("../img/pane/pane4.jpg") no-repeat scroll center center;
+    background: url("/assets/Q4.png") no-repeat scroll center center;
     background-size: cover;
 }
 #tinderslide .pane3 .img {
-    background: url("../img/pane/pane3.jpg") no-repeat scroll center center;
+    background: url("/assets/Q3.png") no-repeat scroll center center;
     background-size: cover;
 }
 #tinderslide .pane2 .img {
-    background: url("../img/pane/pane2.jpg") no-repeat scroll center center;
+    background: url("/assets/Q2.png") no-repeat scroll center center;
     background-size: cover;
 }
 #tinderslide .pane1 .img {
-    background: url("../img/pane/pane1.jpg") no-repeat scroll center center;
+    background: url("/assets/Q1.png") no-repeat scroll center center;
     background-size: cover;
 }
 
