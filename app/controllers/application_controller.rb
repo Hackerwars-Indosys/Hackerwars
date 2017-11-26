@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
 
 
   def user_logged_in?
-    if $session[:user_id]
+    if $session[:uid]
       begin
-        @current_user = User.find_by(uid: $session[:user_id])
+        @current_user = User.find_by(uid: $session[:uid])
       rescue ActiveRecord::RecordNotFound
         reset_user_session
       end
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
   
   def reset_user_session
-    $session[:user_id] = nil
+    $session[:uid] = nil
     @current_user = nil
   end
 
