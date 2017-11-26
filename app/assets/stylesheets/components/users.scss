@@ -8,6 +8,14 @@
 }
 
 .user-login{
+  margin-top: 200px;
+  text-align: center;
+  @at-root{
+    #{&}__image{
+      width: 60%;
+    }
+  }
+
 }
 
 .user-header-container{
