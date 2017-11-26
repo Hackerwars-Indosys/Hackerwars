@@ -20,11 +20,12 @@ class UsersController < ApplicationController
   def question
   end
 
-  def result
-    @recommend_jobs = calculate_distance(@user)
+  def login
+    $session["uid"] = 0;
   end
 
-  def login
+  def result
+    @recommend_jobs = calculate_distance(@user)
   end
 
   # POST /users

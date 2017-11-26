@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'login'
     end
   end
+
   get '/update_question' => 'users#update_question'
   get '/auth/:provider/callback' => 'sessions#create'
 

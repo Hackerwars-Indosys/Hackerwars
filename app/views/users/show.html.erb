@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <div class="user">
-  <div class="user-edit-link-wrapper">
-    <%= link_to 'プロフィールを変更する', edit_user_path(@user), class:"user-edit-link" %> 
-  </div>
+  <% if $session.present? then %>
+    <% if $session.uid == @user.uid then %>
+      <div class="user-edit-link-wrapper">
+        <%= link_to 'プロフィールを変更する', edit_user_path(@user), class:"user-edit-link" %> 
+      </div>
+    <% end %>
+  <% end %>
   <ul class="user-header-container">
     <li class="user-header-box">
       <div class="user-icon-wrapper">
@@ -27,10 +31,14 @@
     </li>
   </ul>
 
-  <div class="user-links">
-    <%= link_to 'ご教授を賜る', question_user_path(@user), class:"user-links__question" %> 
-    <%= link_to '結果を見る', result_user_path(@user), class:"user-links__result" %> 
-  </div>
+  <% if $session.present? then %>
+    <% if $session.uid == @user.uid then %>
+      <div class="user-links">
+        <%= link_to 'ご教授を賜る', question_user_path(@user), class:"user-links__question" %> 
+        <%= link_to '結果を見る', result_user_path(@user), class:"user-links__result" %> 
+      </div>
+    <% end %>
+  <% end %>
 
   <div class="user-content-wrapper">
     <div class="user-content-title">
