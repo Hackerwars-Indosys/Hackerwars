@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     $session = User.find_by(uid: user.uid)
 
 
-    redirect_to '/users'
+    redirect_to user_path($session)
   end
 
 
