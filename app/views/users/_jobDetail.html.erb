@@ -1,0 +1,52 @@
+<div id="modal-container">
+  <div class="modal-background">
+    <div class="modal" id="one">
+      <h2>CEO</h2>
+      <h3>会社を経営するという仕事</h3>
+      <div id="people">
+        <h2 align="left">Story</h2>
+        <div>
+          <h2 align="left">　伊東　豊</h2>
+          <%= image_tag("/assets/ceo1.jpg", size: "100") %>
+
+          <p>
+          私立開成高校、東京大学卒業後、日本IBMに入社。<br>
+          ベンチャー企業の設立に携わり、マーケティング、ウェブ系プロモーションを主に担当した後、<br>
+          スローガンを設立。
+          </p>
+          <%= link_to '詳細', users_path %>
+        </div>
+        <br>
+        <div>
+          <h2 align="left">　仲 暁子</h2>
+          <%= image_tag("/assets/ceo2.jpg", size: "100") %>
+
+          <p>
+          京都大学経済学部卒業後、ゴールドマン・サックス証券に入社。<br>
+          退職後、Facebook Japanに初期メンバーとして参画。2010年9月、現ウォンテッドリーを設立。
+          </p>
+          <%= link_to '詳細', users_path %>
+        </div>
+      </div>
+
+      <br>
+
+      <div id="event">
+        <h2 align='left'>1歩踏み出す</h2>
+        <div>
+          <!-- <h4 align="left">　Reach Your Audience!　アントレプレナーシップに必要な言語スキルを磨くための、英語での特別ワークショップ</h4> -->
+          <%= image_tag("/assets/event1.jpg", width: "350px") %>
+
+          <p>
+          Startup Hub Tokyo
+⾔語学を活かした様々なアクティビティを通して、⼈前で創造⼒豊かに表現できるようなるための特別ワークショップです！ビジネスピッチなどに役⽴つ英語プレゼンテーションスキルを身につけることができます。
+</p>
+          <%= link_to '詳細', users_path %>
+        </div>
+      </div>
+      <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+  		  <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+  		</svg>
+    </div>
+  </div>
+</div>
