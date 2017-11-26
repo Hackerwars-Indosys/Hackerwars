@@ -10,7 +10,8 @@ $("#tinderslide").jTinder({
 	    // set the status text
       	var uid = document.getElementById("user_uid").value;
         $.ajax({
-          url: '/update_question?uid=' + uid + '&qid=question'+ (item.index()+1) + '&ans=0',
+          //url: '/update_question?uid=' + uid + '&qid=question'+ (item.index()+1) + '&ans=0',
+          url: '/update_question?uid=1&qid=question'+ (item.index()+1) + '&ans=0',
           type: 'GET',
           dataType: 'json',
           async: true,
@@ -24,7 +25,8 @@ $("#tinderslide").jTinder({
 	    // set the status text
       	var uid = document.getElementById("user_uid").value;
         $.ajax({
-          url: '/update_question?uid=' + uid + '&qid=question'+ (item.index()+1) + '&ans=1',
+          //url: '/update_question?uid=' + uid + '&qid=question'+ (item.index()+1) + '&ans=1',
+          url: '/update_question?uid=1&qid=question'+ (item.index()+1) + '&ans=1',
           type: 'GET',
           dataType: 'json',
           async: true,

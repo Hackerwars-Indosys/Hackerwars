@@ -5,12 +5,14 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=480">
   </head>
 
   <body>
     <header class="header">
+      <img class="header__top-icon-image" src="/assets/logo.png">
       <div class="header__link-to-top">
-        <img class="header__top-icon-image" src="/assets/logo.png">
+        Virtual Menter
       </div>
       <div class="header__link-to-login">
         ログアウト
