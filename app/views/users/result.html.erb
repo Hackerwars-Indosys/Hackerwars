@@ -1,7 +1,13 @@
 <%= stylesheet_link_tag "result", :media => "all" %>
 <body>
-  <h1>Result</h1>
-    <strong>Recommend Jobs </strong>
+  <div class="user-header-container">
+    <div class="user-header-container__title">
+    <p>診断結果</p>
+    </div>
+    <div class="user-header-detail2">
+    <p>あなたにマッチしていそうな職種一覧です。<br>参考にしてください。</p>
+    </div>
+  </div>
   
     <div id="modal-container">
     <div class="modal-background">
@@ -25,8 +31,5 @@
     <% end %>
     </div>
   </div>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Question', question_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
   <%= javascript_include_tag "result/main.js" %>
 </body>

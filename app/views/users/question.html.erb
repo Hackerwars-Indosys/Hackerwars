@@ -1,5 +1,5 @@
-<h1>Questions</h1>
-
 <%= render 'questionForm', user:@user %>
 
-<%= link_to 'Back', user_path %>
+<div class="user-links">
+<%= link_to '途中結果を見る', result_user_path($session), class:"user-links__question" %>
+</div>
