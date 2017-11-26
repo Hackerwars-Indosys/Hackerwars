@@ -12,6 +12,10 @@
   text-align: center;
   @at-root{
     #{&}__image{
+      width: 80%;
+      margin-bottom: 30px;
+    }
+    #{&}__logo{
       width: 60%;
     }
   }
